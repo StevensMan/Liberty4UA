@@ -22,7 +22,7 @@ export const Header = () => {
             alt="Logo"
             width={300}
             height={62}
-            className="h-auto w-auto"
+            className="xs:w-[250px] h-auto w-[200px] md:w-[300px]"
           />
         </Link>
       </Container>

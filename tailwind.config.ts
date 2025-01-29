@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "360px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
