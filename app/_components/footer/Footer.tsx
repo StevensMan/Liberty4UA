@@ -1,11 +1,11 @@
-import { Container, Section } from '@/app/_components'
-import Image from 'next/image'
-import Link from 'next/link'
-import { SocialIcons } from './SocialIcons'
+import { Container, Section } from "@/app/_components";
+import Image from "next/image";
+import Link from "next/link";
+import { SocialIcons } from "./SocialIcons";
 
 export const Footer = () => {
   return (
-    <footer className="text-[#b7b7b7] font-bold bg-[#004080] w-full min-h-[100px] flex items-center mt-auto">
+    <footer className="mt-auto flex min-h-[100px] w-full items-center bg-[#004080] font-bold text-[#b7b7b7]">
       <Section>
         <Container className="flex items-center justify-between">
           <Image
@@ -13,7 +13,7 @@ export const Footer = () => {
             alt="Logo"
             width={232}
             height={37}
-            className="w-auto h-auto"
+            className="h-auto w-auto"
           />
           <div className="flex flex-col gap-2">
             <Link className="block" href="mailto:contact@protectukrainenow.org">
@@ -28,5 +28,5 @@ export const Footer = () => {
         </Container>
       </Section>
     </footer>
-  )
-}
+  );
+};

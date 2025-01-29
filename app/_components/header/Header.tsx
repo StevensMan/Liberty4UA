@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import { Container } from '@/app/_components'
-import Link from 'next/link'
+import Image from "next/image";
+import { Container } from "@/app/_components";
+import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="relative w-full h-[100px] bg-transparent z-50">
+    <header className="relative z-50 h-[100px] w-full bg-transparent">
       {/* <Image
         className="object-cover object-center"
         src="/header-bg-1.jpg"
@@ -15,17 +15,17 @@ export const Header = () => {
         quality={90}
       />
       <div className="absolute inset-0 bg-[#004080]/50" /> */}
-      <Container className="relative h-full flex items-center justify-between">
+      <Container className="relative flex h-full items-center justify-between">
         <Link href="/">
           <Image
             src="/pun-logo-horizontal-light.svg"
             alt="Logo"
             width={300}
             height={62}
-            className="w-auto h-auto"
+            className="h-auto w-auto"
           />
         </Link>
       </Container>
     </header>
-  )
-}
+  );
+};

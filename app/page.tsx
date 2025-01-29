@@ -1,10 +1,10 @@
-import { Accordion, Container, Section } from '@/app/_components'
-import Image from 'next/image'
+import { Accordion, Container, Section } from "@/app/_components";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="w-full">
-      <Section className="relative text-white h-screen mt-[-100px]">
+      <Section className="relative mt-[-100px] h-screen text-white">
         <Image
           src="/hero-bkg.jpg"
           alt="Background"
@@ -15,14 +15,17 @@ export default function Home() {
           quality={90}
         />
         <div className="absolute inset-0 bg-[#004080]/50" />
-        <Container className="flex flex-col h-full justify-center gap-8">
-          <h1 className="text-5xl font-bold text-balance z-10">
-            Fund Ukraine&apos;s Military,<br/>End Wasteful Aid
+        <Container className="relative z-10 flex h-full flex-col justify-center gap-8">
+          <h1 className="text-balance text-8xl font-bold">
+            Fund Ukraine&apos;s Military,
+            <br />
+            End Wasteful Aid
           </h1>
-          <p className="text-2xl text-balance z-10">
+          <p className="text-balance text-2xl">
             Exposing Corruption and Bias to Prioritize Military Support
             <br /> and Secure Ukraine&apos;s Future.
           </p>
+          <button className="btn">Button</button>
         </Container>
       </Section>
       {/* <Section>
@@ -38,12 +41,12 @@ export default function Home() {
       </Section> */}
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8 pt-16">
-          <h2 className="text-6xl font-bold ">Mission:</h2>
-          <p className="text-2xl text-center">
+          <h2 className="text-6xl font-bold">Mission:</h2>
+          <p className="text-center text-2xl">
             Our mission is to ensure that U.S. aid to Ukraine is used
             effectively to support its defense capabilities and long-term
             stability. Current programs are not achieving their goals and may
-            even be counterproductive. We aim to{' '}
+            even be counterproductive. We aim to{" "}
             <span className="font-bold">
               redirect funds from ineffective projects to the Ukrainian military
             </span>
@@ -54,36 +57,36 @@ export default function Home() {
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
           <h2 className="text-6xl font-bold">Goals:</h2>
-          <ul className="text-2xl list-disc list-inside">
+          <ul className="list-inside list-disc text-2xl">
             <li>
               To <span className="font-bold">redirect the $482 million</span> in
               2025 USAID funding, and other funds, to directly strengthen the
               Ukrainian military .
             </li>
             <li>
-              To{' '}
+              To{" "}
               <span className="font-bold">
                 end funding for ineffective anti-corruption programs
-              </span>{' '}
+              </span>{" "}
               that have not decreased corruption in Ukraine.
             </li>
             <li>
-              To{' '}
-              <span className="font-bold">end funding for media programs</span>{' '}
+              To{" "}
+              <span className="font-bold">end funding for media programs</span>{" "}
               that have demonstrated biased and partisan propaganda.
             </li>
             <li>
-              To{' '}
+              To{" "}
               <span className="font-bold">
                 promote transparency and accountability
-              </span>{' '}
+              </span>{" "}
               in the allocation of US aid to Ukraine.
             </li>
             <li>
-              To{' '}
+              To{" "}
               <span className="font-bold">
                 prevent the spread of russian aggression
-              </span>{' '}
+              </span>{" "}
               and protect the security interests of the United States and its
               allies. security interests of the United States and its allies.
             </li>
@@ -93,23 +96,23 @@ export default function Home() {
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
           <h2 className="text-6xl font-bold">Issues:</h2>
-          <ul className="text-2xl list-disc list-inside">
+          <ul className="list-inside list-disc text-2xl">
             <li>
               <span className="font-bold">
                 Ineffective Anti-Corruption Efforts:
-              </span>{' '}
+              </span>{" "}
               Despite U.S. support, corruption in Ukraine persists, with
               numerous scandals involving luxury car sales, military food
               procurement, and misuse of funds.
             </li>
             <li>
-              <span className="font-bold">Biased Media Coverage:</span>{' '}
+              <span className="font-bold">Biased Media Coverage:</span>{" "}
               U.S.-funded media outlets in Ukraine have been found to engage in
               one-sided propaganda, misrepresenting political figures and
               promoting partisan views, rather than objective reporting.
             </li>
             <li>
-              <span className="font-bold">Misuse of Humanitarian Aid:</span>{' '}
+              <span className="font-bold">Misuse of Humanitarian Aid:</span>{" "}
               Significant amounts of humanitarian aid have been embezzled, with
               evidence of organized theft by high-ranking officials.
             </li>
@@ -125,10 +128,10 @@ export default function Home() {
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
-          <h2 className="text-6xl font-bold ">
+          <h2 className="text-6xl font-bold">
             Why Redirecting Aid is Crucial:
           </h2>
-          <ul className="text-2xl list-disc list-inside">
+          <ul className="list-inside list-disc text-2xl">
             <li>
               A russian victory in Ukraine would have far-reaching negative
               consequences. Russia could become emboldened to further expand its
@@ -153,5 +156,5 @@ export default function Home() {
         </Container>
       </Section>
     </main>
-  )
+  );
 }
