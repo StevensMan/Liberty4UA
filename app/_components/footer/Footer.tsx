@@ -1,36 +1,59 @@
 import { Container, Section } from "@/app/_components";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
-import { SocialIcons } from "./SocialIcons";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import LanguageIcon from "@mui/icons-material/Language";
+import EmailIcon from "@mui/icons-material/Email";
 
 export const Footer = () => {
   return (
     <footer className="mt-auto flex min-h-[100px] w-full bg-[#004080] font-bold text-white md:items-center">
       <Section>
-        <Container className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <Image
+        <Container className="flex flex-col gap-6 md:flex-row md:justify-between">
+          {/* <Image
             src="/pun-logo-horizontal-dark.svg"
             alt="Logo"
             width={232}
             height={37}
             className="h-[37px] w-[232px]"
-          />
-
-          <div className="flex flex-col gap-2">
+          /> */}
+          <p className="text-2xl font-bold">Liberty4UA</p>
+          <div className="flex flex-col gap-4">
+            <h4 className="text-xl font-bold">Contact</h4>
             <Link
-              className="xs:text-base text-sm"
-              href="mailto:contact@protectukrainenow.org"
+              className="flex items-center gap-2 text-sm xs:text-base"
+              href="mailto:contact@liberty4ua.org"
             >
-              contact@protectukrainenow.org
+              <EmailIcon />
+              contact@liberty4ua.org
             </Link>
-            <SocialIcons />
           </div>
-          <div className="flex flex-col gap-2">
-            <Link className="xs:text-base text-sm" href="/">
-              Privacy Policy
+          <div className="flex flex-col gap-4">
+            <h4 className="text-xl font-bold">Partners</h4>
+            <Link
+              className="flex items-center gap-2 text-sm xs:text-base"
+              href="https://protectukrainenow.org"
+              target="_blank"
+            >
+              <LanguageIcon />
+              Protect Ukraine Now
             </Link>
-            <Link className="xs:text-base text-sm" href="/">
-              Terms of Service
+            <Link
+              className="flex items-center gap-2 text-sm xs:text-base"
+              href="https://www.youtube.com/@SergeyLubarsky"
+              target="_blank"
+            >
+              <YouTubeIcon />
+              Sergey Lubarsky
+            </Link>
+            <Link
+              className="flex items-center gap-2 text-sm xs:text-base"
+              href="https://t.me/SergeyLubarsky"
+              target="_blank"
+            >
+              <TelegramIcon />
+              Sergey Lubarsky
             </Link>
           </div>
         </Container>
