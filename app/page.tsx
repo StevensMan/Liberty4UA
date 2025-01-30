@@ -4,7 +4,10 @@ import {
   Container,
   Section
 } from '@/app/_components'
+import { routes } from '@/lib/routes'
+import { Button } from '@mui/material'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -122,6 +125,28 @@ export default function Home() {
               organizations.
             </li>
           </ul>
+        </Container>
+      </Section>
+      <Section>
+        <Container className="flex flex-col items-center justify-center gap-8 md:flex-row">
+          <div className="flex w-full flex-col items-center justify-center gap-8 rounded-lg border-2 border-gray-600 p-8">
+            <h2 className="text-center text-4xl font-bold md:text-6xl">
+              Call to Congress
+            </h2>
+            <p className="text-lg md:text-2xl">???</p>
+            <Link href={routes.call} className="w-full">
+              <Button className="w-full">Call to Congress</Button>
+            </Link>
+          </div>
+          <div className="flex w-full flex-col items-center justify-center gap-8 rounded-lg border-2 border-gray-600 p-8">
+            <h2 className="text-center text-4xl font-bold md:text-6xl">
+              Letter to Congress
+            </h2>
+            <p className="text-lg md:text-2xl">???</p>
+            <Link href={routes.letter} className="w-full">
+              <Button className="w-full">Letter to Congress</Button>
+            </Link>
+          </div>
         </Container>
       </Section>
       <Section>
