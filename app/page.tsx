@@ -14,42 +14,31 @@ export default function Home() {
           src="/hero-bkg.jpg"
           alt="Background"
           fill
-          className="xs:object-[60%] object-cover object-center"
-          priority
-          sizes="100vw"
+          className="object-cover object-[60%] sm:object-center"
+          priority={true}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 3840px"
           quality={90}
         />
         <div className="absolute inset-0 bg-[#004080]/50" />
         <Container className="relative z-10 flex h-full flex-col justify-center gap-8">
-          <h1 className="xs:text-5xl text-balance text-4xl font-bold md:text-8xl">
+          <h1 className="text-balance text-4xl font-bold md:text-8xl">
             Fund Ukraine&apos;s Military,
             <br />
             End Wasteful Aid
           </h1>
-          <p className="xs:text-lg text-balance text-base md:text-2xl">
+          <p className="text-balance text-lg md:text-2xl">
             Exposing Corruption and Bias to Prioritize Military Support
             <br /> and Secure Ukraine&apos;s Future.
           </p>
           <ButtonDownload />
         </Container>
       </Section>
-      {/* <Section>
-        <Container className="flex flex-col items-center justify-center gap-8 pt-16">
-          <Image
-            src="/hero-img.jpg"
-            alt="Background"
-            width={1284}
-            height={754}
-            className="w-full h-auto"
-          />
-        </Container>
-      </Section> */}
       <Section>
-        <Container className="flex flex-col items-center justify-center gap-8 pt-16">
-          <h2 className="xs:text-4xl text-center text-3xl font-bold md:text-6xl">
+        <Container className="flex flex-col items-center justify-center gap-6 pt-16">
+          <h2 className="text-center text-4xl font-bold md:text-6xl">
             Mission:
           </h2>
-          <p className="xs:text-lg text-base md:text-2xl">
+          <p className="text-lg md:text-2xl">
             Our mission is to ensure that U.S. aid to Ukraine is used
             effectively to support its defense capabilities and long-term
             stability. Current programs are not achieving their goals and may
@@ -62,11 +51,9 @@ export default function Home() {
         </Container>
       </Section>
       <Section>
-        <Container className="flex flex-col items-center justify-center gap-8">
-          <h2 className="xs:text-4xl text-center text-3xl font-bold md:text-6xl">
-            Goals:
-          </h2>
-          <ul className="xs:text-lg list-inside list-disc text-base md:text-2xl">
+        <Container className="flex flex-col items-center justify-center gap-6">
+          <h2 className="text-center text-4xl font-bold md:text-6xl">Goals:</h2>
+          <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
               To <span className="font-bold">redirect the $482 million</span> in
               2025 USAID funding, and other funds, to directly strengthen the
@@ -104,10 +91,10 @@ export default function Home() {
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
-          <h2 className="xs:text-4xl text-center text-3xl font-bold md:text-6xl">
+          <h2 className="text-center text-4xl font-bold md:text-6xl">
             Issues:
           </h2>
-          <ul className="xs:text-lg list-inside list-disc text-base md:text-2xl">
+          <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
               <span className="font-bold">
                 Ineffective Anti-Corruption Efforts:
@@ -139,10 +126,10 @@ export default function Home() {
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
-          <h2 className="xs:text-4xl text-center text-3xl font-bold md:text-6xl">
+          <h2 className="text-center text-4xl font-bold md:text-6xl">
             Why Redirecting Aid is Crucial:
           </h2>
-          <ul className="xs:text-lg list-inside list-disc text-base md:text-2xl">
+          <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
               A russian victory in Ukraine would have far-reaching negative
               consequences. Russia could become emboldened to further expand its
@@ -161,10 +148,8 @@ export default function Home() {
         </Container>
       </Section>
       <Section>
-        <Container className="flex flex-col items-center justify-center gap-8 pt-16">
-          <h2 className="xs:text-4xl text-center text-3xl font-bold md:text-6xl">
-            FAQ
-          </h2>
+        <Container className="flex flex-col items-center justify-center gap-8 pb-16">
+          <h2 className="text-center text-4xl font-bold md:text-6xl">FAQ</h2>
           <Accordion />
         </Container>
       </Section>

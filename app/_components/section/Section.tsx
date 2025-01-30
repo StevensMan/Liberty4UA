@@ -8,6 +8,6 @@ export const Section = ({
   className?: string;
 }) => {
   return (
-    <section className={cn("w-full py-16", className)}>{children}</section>
+    <section className={cn("w-full py-12", className)}>{children}</section>
   );
 };

@@ -10,8 +10,8 @@ export const Container = ({
   return (
     <div
       className={cn(
-        "xs:px-6 mx-auto w-full px-4 md:px-8",
-        "xs:max-w-[640px] max-w-[320px] md:max-w-container",
+        "mx-auto w-full px-4 md:px-8",
+        "max-w-container",
         className,
       )}
     >

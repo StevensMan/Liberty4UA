@@ -1,12 +1,12 @@
 export const Accordion = () => {
   return (
     <>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" defaultChecked />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What are the main concerns raised about US financial aid to Ukraine?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-lg md:text-2xl">
           <p>
             The primary concerns revolve around the misuse of funds,
             particularly humanitarian aid, which has reportedly been embezzled
@@ -22,12 +22,12 @@ export const Accordion = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           How is US media support in Ukraine being criticized?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-lg md:text-2xl">
           <p>
             US-funded media outlets in Ukraine are criticized for displaying a
             significant bias in their reporting. Specifically, they are accused
@@ -40,12 +40,12 @@ export const Accordion = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What evidence is cited to demonstrate corruption within Ukraine?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-base xs:text-lg md:text-2xl">
           <p>
             Several examples are provided, including: large-scale theft of
             humanitarian aid in the Zaporizhia region, evidenced by missing
@@ -59,13 +59,13 @@ export const Accordion = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What is the &quot;Gym&quot; concentration camp mentioned in the
           report?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-base xs:text-lg md:text-2xl">
           <p>
             The &quot;Gym&quot; refers to an unofficial detention facility that
             allegedly operated in the basement of the central Security Service
@@ -79,13 +79,13 @@ export const Accordion = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What human rights abuses are being reported within the Ukrainian
           military recruitment process?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-base xs:text-lg md:text-2xl">
           <p>
             There are reports of illegal detentions, torture, and beatings
             within the Territorial Centers of Recruitment and Social Support
@@ -96,13 +96,13 @@ export const Accordion = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What is the main recommendation of the report regarding US aid to
           Ukraine?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-base xs:text-lg md:text-2xl">
           <p>
             The main recommendation is to redirect $482 million from the 2025
             USAID budget, as well as other funding aimed at media support,
@@ -115,13 +115,13 @@ export const Accordion = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-200">
+      <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
-        <h4 className="xs:text-2xl collapse-title text-xl font-bold md:text-4xl">
+        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What are the strategic incentives for the USA to support Ukraine
           according to the report?
         </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
+        <div className="collapse-content text-base xs:text-lg md:text-2xl">
           <p>
             The report argues that a Russian-dominated Ukraine would embolden
             Russia to expand its influence in the region, potentially leading to
