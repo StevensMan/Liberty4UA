@@ -1,10 +1,10 @@
-import { Container, Section } from "@/app/_components";
+import { Container, Section } from '@/app/_components'
 // import Image from "next/image";
-import Link from "next/link";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import LanguageIcon from "@mui/icons-material/Language";
-import EmailIcon from "@mui/icons-material/Email";
+import Link from 'next/link'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import TelegramIcon from '@mui/icons-material/Telegram'
+import LanguageIcon from '@mui/icons-material/Language'
+import EmailIcon from '@mui/icons-material/Email'
 
 export const Footer = () => {
   return (
@@ -54,5 +54,5 @@ export const Footer = () => {
         </Container>
       </Section>
     </footer>
-  );
-};
+  )
+}

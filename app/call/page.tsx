@@ -1,3 +1,3 @@
 export default function CallPage() {
-  return <div>Call</div>;
+  return <div>Call</div>
 }

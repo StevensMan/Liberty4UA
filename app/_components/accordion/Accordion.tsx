@@ -45,7 +45,7 @@ export const Accordion = () => {
         <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           What evidence is cited to demonstrate corruption within Ukraine?
         </h4>
-        <div className="collapse-content text-base xs:text-lg md:text-2xl">
+        <div className="xs:text-lg collapse-content text-base md:text-2xl">
           <p>
             Several examples are provided, including: large-scale theft of
             humanitarian aid in the Zaporizhia region, evidenced by missing
@@ -65,7 +65,7 @@ export const Accordion = () => {
           What is the &quot;Gym&quot; concentration camp mentioned in the
           report?
         </h4>
-        <div className="collapse-content text-base xs:text-lg md:text-2xl">
+        <div className="xs:text-lg collapse-content text-base md:text-2xl">
           <p>
             The &quot;Gym&quot; refers to an unofficial detention facility that
             allegedly operated in the basement of the central Security Service
@@ -85,7 +85,7 @@ export const Accordion = () => {
           What human rights abuses are being reported within the Ukrainian
           military recruitment process?
         </h4>
-        <div className="collapse-content text-base xs:text-lg md:text-2xl">
+        <div className="xs:text-lg collapse-content text-base md:text-2xl">
           <p>
             There are reports of illegal detentions, torture, and beatings
             within the Territorial Centers of Recruitment and Social Support
@@ -102,7 +102,7 @@ export const Accordion = () => {
           What is the main recommendation of the report regarding US aid to
           Ukraine?
         </h4>
-        <div className="collapse-content text-base xs:text-lg md:text-2xl">
+        <div className="xs:text-lg collapse-content text-base md:text-2xl">
           <p>
             The main recommendation is to redirect $482 million from the 2025
             USAID budget, as well as other funding aimed at media support,
@@ -121,7 +121,7 @@ export const Accordion = () => {
           What are the strategic incentives for the USA to support Ukraine
           according to the report?
         </h4>
-        <div className="collapse-content text-base xs:text-lg md:text-2xl">
+        <div className="xs:text-lg collapse-content text-base md:text-2xl">
           <p>
             The report argues that a Russian-dominated Ukraine would embolden
             Russia to expand its influence in the region, potentially leading to
@@ -135,5 +135,5 @@ export const Accordion = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

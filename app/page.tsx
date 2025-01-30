@@ -2,9 +2,9 @@ import {
   Accordion,
   ButtonDownload,
   Container,
-  Section,
-} from "@/app/_components";
-import Image from "next/image";
+  Section
+} from '@/app/_components'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
             Our mission is to ensure that U.S. aid to Ukraine is used
             effectively to support its defense capabilities and long-term
             stability. Current programs are not achieving their goals and may
-            even be counterproductive. We aim to{" "}
+            even be counterproductive. We aim to{' '}
             <span className="font-bold">
               redirect funds from ineffective projects to the Ukrainian military
             </span>
@@ -60,29 +60,29 @@ export default function Home() {
               Ukrainian military .
             </li>
             <li>
-              To{" "}
+              To{' '}
               <span className="font-bold">
                 end funding for ineffective anti-corruption programs
-              </span>{" "}
+              </span>{' '}
               that have not decreased corruption in Ukraine.
             </li>
             <li>
-              To{" "}
-              <span className="font-bold">end funding for media programs</span>{" "}
+              To{' '}
+              <span className="font-bold">end funding for media programs</span>{' '}
               that have demonstrated biased and partisan propaganda.
             </li>
             <li>
-              To{" "}
+              To{' '}
               <span className="font-bold">
                 promote transparency and accountability
-              </span>{" "}
+              </span>{' '}
               in the allocation of US aid to Ukraine.
             </li>
             <li>
-              To{" "}
+              To{' '}
               <span className="font-bold">
                 prevent the spread of russian aggression
-              </span>{" "}
+              </span>{' '}
               and protect the security interests of the United States and its
               allies. security interests of the United States and its allies.
             </li>
@@ -98,19 +98,19 @@ export default function Home() {
             <li>
               <span className="font-bold">
                 Ineffective Anti-Corruption Efforts:
-              </span>{" "}
+              </span>{' '}
               Despite U.S. support, corruption in Ukraine persists, with
               numerous scandals involving luxury car sales, military food
               procurement, and misuse of funds.
             </li>
             <li>
-              <span className="font-bold">Biased Media Coverage:</span>{" "}
+              <span className="font-bold">Biased Media Coverage:</span>{' '}
               U.S.-funded media outlets in Ukraine have been found to engage in
               one-sided propaganda, misrepresenting political figures and
               promoting partisan views, rather than objective reporting.
             </li>
             <li>
-              <span className="font-bold">Misuse of Humanitarian Aid:</span>{" "}
+              <span className="font-bold">Misuse of Humanitarian Aid:</span>{' '}
               Significant amounts of humanitarian aid have been embezzled, with
               evidence of organized theft by high-ranking officials.
             </li>
@@ -154,5 +154,5 @@ export default function Home() {
         </Container>
       </Section>
     </main>
-  );
+  )
 }

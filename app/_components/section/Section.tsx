@@ -1,13 +1,11 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
 export const Section = ({
   children,
-  className,
+  className
 }: {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }) => {
-  return (
-    <section className={cn("w-full py-12", className)}>{children}</section>
-  );
-};
+  return <section className={cn('w-full py-12', className)}>{children}</section>
+}

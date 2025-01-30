@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import DownloadForOfflineIcon from "@mui/icons-material/DownloadForOffline";
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline'
 
 export const ButtonDownload = () => {
   return (
@@ -8,5 +8,5 @@ export const ButtonDownload = () => {
       <DownloadForOfflineIcon />
       Download Report
     </button>
-  );
-};
+  )
+}
