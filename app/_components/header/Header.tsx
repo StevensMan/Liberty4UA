@@ -25,7 +25,7 @@ export const Header = () => {
             src="/header-bg-1.jpg"
             alt="Liberty4UA"
             fill
-            className="absolute left-0 top-0"
+            className="absolute left-0 top-0 object-cover object-center"
           />
           <div className="absolute inset-0 bg-black opacity-30"></div>
         </>
