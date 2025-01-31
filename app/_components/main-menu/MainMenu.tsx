@@ -9,7 +9,7 @@ export const MainMenu = () => {
   const pathname = usePathname()
 
   return (
-    <ul className="flex flex-row items-center justify-center gap-8 text-white">
+    <ul className="hidden flex-row items-center justify-center gap-8 text-white md:flex">
       <li>
         <Link
           className={cn(
