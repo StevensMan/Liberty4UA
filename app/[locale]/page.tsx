@@ -53,36 +53,29 @@ export default function Home() {
           </h2>
           <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
-              To <span className="font-bold">redirect the $482 million</span> in
-              2025 USAID funding, and other funds, to directly strengthen the
-              Ukrainian military .
+              {t.rich('goals.point1', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              To{' '}
-              <span className="font-bold">
-                end funding for ineffective anti-corruption programs
-              </span>{' '}
-              that have not decreased corruption in Ukraine.
+              {t.rich('goals.point2', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              To{' '}
-              <span className="font-bold">end funding for media programs</span>{' '}
-              that have demonstrated biased and partisan propaganda.
+              {t.rich('goals.point3', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              To{' '}
-              <span className="font-bold">
-                promote transparency and accountability
-              </span>{' '}
-              in the allocation of US aid to Ukraine.
+              {t.rich('goals.point4', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              To{' '}
-              <span className="font-bold">
-                prevent the spread of russian aggression
-              </span>{' '}
-              and protect the security interests of the United States and its
-              allies. security interests of the United States and its allies.
+              {t.rich('goals.point5', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
           </ul>
         </Container>
@@ -90,34 +83,28 @@ export default function Home() {
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
           <h2 className="text-center text-4xl font-bold md:text-6xl">
-            Issues:
+            {t('issues.title')}
           </h2>
           <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
-              <span className="font-bold">
-                Ineffective Anti-Corruption Efforts:
-              </span>{' '}
-              Despite U.S. support, corruption in Ukraine persists, with
-              numerous scandals involving luxury car sales, military food
-              procurement, and misuse of funds.
+              {t.rich('issues.point1', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              <span className="font-bold">Biased Media Coverage:</span>{' '}
-              U.S.-funded media outlets in Ukraine have been found to engage in
-              one-sided propaganda, misrepresenting political figures and
-              promoting partisan views, rather than objective reporting.
+              {t.rich('issues.point2', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              <span className="font-bold">Misuse of Humanitarian Aid:</span>{' '}
-              Significant amounts of humanitarian aid have been embezzled, with
-              evidence of organized theft by high-ranking officials.
+              {t.rich('issues.point3', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              <span className="font-bold">Human Rights Abuses:</span> There are
-              credible reports of human rights abuses, including illegal
-              detentions, torture, and beatings, within Ukrainian government
-              institutions, and a lack of appropriate response from human rights
-              organizations.
+              {t.rich('issues.point4', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
           </ul>
         </Container>
@@ -127,7 +114,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-8 rounded-2xl border-2 border-gray-600 p-8">
             <div className="flex flex-col gap-2">
               <h2 className="text-4xl font-bold md:text-6xl">
-                Call to Congress
+                {t('call.title')}
               </h2>
               <p className="text-lg md:text-2xl">???</p>
             </div>
@@ -135,14 +122,14 @@ export default function Home() {
               href={routes.call}
               className="flex items-center gap-2 self-start text-lg text-blue-600 underline hover:no-underline"
             >
-              Call to Congress
+              {t('call.link')}
               <KeyboardArrowRightIcon />
             </Link>
           </div>
           <div className="flex flex-col justify-between gap-8 rounded-2xl border-2 border-gray-600 p-8">
             <div className="flex flex-col gap-2">
               <h2 className="text-4xl font-bold md:text-6xl">
-                Letter to Congress
+                {t('letter.title')}
               </h2>
               <p className="text-lg md:text-2xl">???</p>
             </div>
@@ -150,7 +137,7 @@ export default function Home() {
               href={routes.letter}
               className="flex items-center gap-2 self-start text-lg text-blue-600 underline hover:no-underline"
             >
-              Letter to Congress
+              {t('letter.link')}
               <KeyboardArrowRightIcon />
             </Link>
           </div>
@@ -159,29 +146,32 @@ export default function Home() {
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
           <h2 className="text-center text-4xl font-bold md:text-6xl">
-            Why Redirecting Aid is Crucial:
+            {t('why.title')}
           </h2>
           <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
-              A russian victory in Ukraine would have far-reaching negative
-              consequences. Russia could become emboldened to further expand its
-              influence in other countries, increasing global tensions.
+              {t.rich('why.point1', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              The US must not appear weak on the international stage, which
-              could encourage other adversarial nations.
+              {t.rich('why.point2', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
             <li>
-              The current trajectory of US aid is not maximizing its intended
-              impact. By prioritizing military support, the U.S. can help
-              Ukraine secure its own future.
+              {t.rich('why.point3', {
+                b: (chunks) => <span className="font-bold">{chunks}</span>
+              })}
             </li>
           </ul>
         </Container>
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8 pb-16">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">FAQ</h2>
+          <h2 className="text-center text-4xl font-bold md:text-6xl">
+            {t('faq.title')}
+          </h2>
           <Accordion />
         </Container>
       </Section>
