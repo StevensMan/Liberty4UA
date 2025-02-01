@@ -1,0 +1,15 @@
+{
+    "header": {
+      "nav": {
+        "home": "Головна",
+        "about": "Про нас",
+        "contact": "Контакти"
+      }
+    },
+    "footer": {
+        "titles": {
+            "partners": "Партнери",
+            "contact": "Контакти"
+    }
+  }
+}

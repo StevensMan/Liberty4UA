@@ -2,8 +2,7 @@
 
 import Image from 'next/image'
 import { Container, MainMenu } from '@/app/_components'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+import { usePathname, Link } from '@/lib/i18n/routing'
 import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 

@@ -6,9 +6,13 @@ import {
 } from '@/app/_components'
 import { routes } from '@/lib/routes'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/lib/i18n/routing'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+import { useTranslations } from 'next-intl'
+
 export default function Home() {
+  const t = useTranslations('HomePage')
+
   return (
     <main className="w-full">
       <Section className="relative mt-[-100px] h-screen text-white">
@@ -24,37 +28,29 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#004080]/50" />
         <Container className="relative z-10 flex h-full flex-col justify-center gap-8">
           <h1 className="text-balance text-4xl font-bold md:text-8xl">
-            Fund Ukraine&apos;s Military,
-            <br />
-            End Wasteful Aid
+            {t('title')}
           </h1>
-          <p className="text-balance text-lg md:text-2xl">
-            Exposing Corruption and Bias to Prioritize Military Support
-            <br /> and Secure Ukraine&apos;s Future.
-          </p>
+          <p className="text-balance text-lg md:text-2xl">{t('subtitle')}</p>
           <ButtonDownload />
         </Container>
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-6 pt-16">
           <h2 className="text-center text-4xl font-bold md:text-6xl">
-            Mission:
+            {t('mission.title')}
           </h2>
           <p className="text-lg md:text-2xl">
-            Our mission is to ensure that U.S. aid to Ukraine is used
-            effectively to support its defense capabilities and long-term
-            stability. Current programs are not achieving their goals and may
-            even be counterproductive. We aim to{' '}
-            <span className="font-bold">
-              redirect funds from ineffective projects to the Ukrainian military
-            </span>
-            , enhancing its ability to defend the country from aggression.
+            {t.rich('mission.text', {
+              b: (chunks) => <span className="font-bold">{chunks}</span>
+            })}
           </p>
         </Container>
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-6">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">Goals:</h2>
+          <h2 className="text-center text-4xl font-bold md:text-6xl">
+            {t('goals.title')}
+          </h2>
           <ul className="list-inside list-disc text-lg md:text-2xl">
             <li>
               To <span className="font-bold">redirect the $482 million</span> in

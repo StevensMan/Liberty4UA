@@ -1,0 +1,15 @@
+{
+ "header": {
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    }
+  },
+  "footer": {
+    "titles": {
+      "contact": "Contact",
+      "partners": "Partners"
+    }
+  }
+}

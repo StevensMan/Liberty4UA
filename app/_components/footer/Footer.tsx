@@ -1,12 +1,14 @@
 import { Container, Section } from '@/app/_components'
-// import Image from "next/image";
-import Link from 'next/link'
+import { Link } from '@/lib/i18n/routing'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import LanguageIcon from '@mui/icons-material/Language'
 import EmailIcon from '@mui/icons-material/Email'
+import { useTranslations } from 'next-intl'
 
 export const Footer = () => {
+  const t = useTranslations('footer')
+
   return (
     <footer className="mt-auto flex min-h-[100px] w-full bg-[#004080] font-bold text-white md:items-center">
       <Section>
@@ -15,7 +17,7 @@ export const Footer = () => {
             Liberty4<span className="text-yellow-400">UA</span>
           </p>
           <div className="flex flex-col gap-4">
-            <h4 className="text-xl font-bold">Contact</h4>
+            <h4 className="text-xl font-bold">{t('titles.contact')}</h4>
             <Link
               className="flex items-center gap-2 text-sm md:text-base"
               href="mailto:contact@liberty4ua.org"
@@ -25,7 +27,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="text-xl font-bold">Partners</h4>
+            <h4 className="text-xl font-bold">{t('titles.partners')}</h4>
             <Link
               className="flex items-center gap-2 text-sm md:text-base"
               href="https://protectukrainenow.org"

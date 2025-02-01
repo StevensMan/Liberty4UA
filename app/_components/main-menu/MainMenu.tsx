@@ -1,16 +1,19 @@
 'use client'
 
-import Link from 'next/link'
+import { Link, usePathname } from '@/lib/i18n/routing'
 import { routes } from '@/lib/routes'
-import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
+import { useTranslations } from 'next-intl'
+import { LanguageSwitcher } from '@/app/_components/language-switcher/LanguageSwitcher'
 
 export const MainMenu = () => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+
+  const t = useTranslations('header.nav')
 
   const handleClose = () => {
     setIsOpen(false)
@@ -43,7 +46,7 @@ export const MainMenu = () => {
             href={routes.about}
             onClick={handleClose}
           >
-            About
+            {t('about')}
           </Link>
         </li>
         <li>
@@ -55,8 +58,11 @@ export const MainMenu = () => {
             href={routes.contact}
             onClick={handleClose}
           >
-            Contact
+            {t('contact')}
           </Link>
+        </li>
+        <li>
+          <LanguageSwitcher />
         </li>
       </ul>
     </>

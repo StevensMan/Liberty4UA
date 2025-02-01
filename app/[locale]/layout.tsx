@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header, Footer } from '@/app/_components'
+import { routing } from '@/lib/i18n/routing'
+import { notFound } from 'next/navigation'
+import { getMessages } from 'next-intl/server'
+import { NextIntlClientProvider } from 'next-intl'
+import { Locale } from '@/lib/i18n/types'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -52,19 +57,30 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest'
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{
+export default async function RootLayout(props: {
   children: React.ReactNode
-}>) {
+  params: { locale: string }
+}) {
+  // Await dynamic params resolution before using its properties
+  const resolvedParams = await Promise.resolve(props.params)
+  const locale = resolvedParams.locale
+
+  if (!routing.locales.includes(locale as Locale)) {
+    notFound()
+  }
+
+  const messages = await getMessages()
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col items-center antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          {props.children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   )
