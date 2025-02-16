@@ -25,25 +25,22 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Ukraine needs Public Support!',
-  description:
-    'Request your representatives to give Ukraine the munitions to win this war',
-  metadataBase: new URL('https://protectukrainenow.org'),
+  title: "Fund Ukraine's Military, End Wasteful Aid",
+  description: "Fund Ukraine's Military, End Wasteful Aid",
+  metadataBase: new URL('http://libertyforukraine.org/'),
   openGraph: {
-    title: 'Ukraine needs Public Support!',
-    description:
-      'Request your representatives to give Ukraine the munitions to win this war',
-    url: 'https://protectukrainenow.org',
-    siteName: 'Protect Ukraine Now',
+    title: "Fund Ukraine's Military, End Wasteful Aid",
+    description: "Fund Ukraine's Military, End Wasteful Aid",
+    url: 'http://libertyforukraine.org/',
+    siteName: "Fund Ukraine's Military, End Wasteful Aid",
     locale: 'en_US',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ukraine needs Public Support!',
-    description:
-      'Request your representatives to give Ukraine the munitions to win this war',
-    creator: '@Protect_UA_Now'
+    title: "Fund Ukraine's Military, End Wasteful Aid",
+    description: "Fund Ukraine's Military, End Wasteful Aid",
+    creator: '@LibertyForUkraine'
   },
   icons: {
     icon: [

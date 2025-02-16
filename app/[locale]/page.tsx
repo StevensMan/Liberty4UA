@@ -1,15 +1,8 @@
-import {
-  Accordion,
-  ButtonDownload,
-  Container,
-  Section
-} from '@/app/_components'
-import { routes } from '@/lib/routes'
+import { Accordion, Container, Section, CardAction } from '@/app/_components'
 import Image from 'next/image'
-import { Link } from '@/lib/i18n/routing'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { useTranslations } from 'next-intl'
-
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline'
+import { routes } from '@/lib/routes'
 export default function Home() {
   const t = useTranslations('HomePage')
 
@@ -31,11 +24,44 @@ export default function Home() {
             {t('title')}
           </h1>
           <p className="text-balance text-lg md:text-2xl">{t('subtitle')}</p>
-          <ButtonDownload />
+          <button className="btn self-start bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl">
+            <DownloadForOfflineIcon />
+            {t('downloadReport')}
+          </button>
         </Container>
       </Section>
       <Section>
         <Container className="flex flex-col items-center justify-center gap-6 pt-16">
+          <h2 className="text-center text-4xl font-bold md:text-6xl">
+            {t('aboutUs.title')}
+          </h2>
+          <p className="text-lg md:text-2xl">
+            {t.rich('aboutUs.text', {
+              b: (chunks) => <span className="font-bold">{chunks}</span>
+            })}
+          </p>
+        </Container>
+      </Section>
+      <Section>
+        <Container className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <CardAction
+            title={t('call.title')}
+            description={t('call.description')}
+            link={routes.call}
+            linkText={t('call.link')}
+          />
+          <CardAction
+            title={t('letter.title')}
+            description={t('letter.description')}
+            link={
+              'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'
+            }
+            linkText={t('letter.link')}
+          />
+        </Container>
+      </Section>
+      <Section>
+        <Container className="flex flex-col items-center justify-center gap-6">
           <h2 className="text-center text-4xl font-bold md:text-6xl">
             {t('mission.title')}
           </h2>
@@ -109,40 +135,7 @@ export default function Home() {
           </ul>
         </Container>
       </Section>
-      <Section>
-        <Container className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="flex flex-col justify-between gap-8 rounded-2xl border-2 border-gray-600 p-8">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-4xl font-bold md:text-6xl">
-                {t('call.title')}
-              </h2>
-              <p className="text-lg md:text-2xl">???</p>
-            </div>
-            <Link
-              href={routes.call}
-              className="flex items-center gap-2 self-start text-lg text-blue-600 underline hover:no-underline"
-            >
-              {t('call.link')}
-              <KeyboardArrowRightIcon />
-            </Link>
-          </div>
-          <div className="flex flex-col justify-between gap-8 rounded-2xl border-2 border-gray-600 p-8">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-4xl font-bold md:text-6xl">
-                {t('letter.title')}
-              </h2>
-              <p className="text-lg md:text-2xl">???</p>
-            </div>
-            <Link
-              href={routes.letter}
-              className="flex items-center gap-2 self-start text-lg text-blue-600 underline hover:no-underline"
-            >
-              {t('letter.link')}
-              <KeyboardArrowRightIcon />
-            </Link>
-          </div>
-        </Container>
-      </Section>
+
       <Section>
         <Container className="flex flex-col items-center justify-center gap-8">
           <h2 className="text-center text-4xl font-bold md:text-6xl">

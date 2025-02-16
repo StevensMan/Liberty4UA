@@ -3,6 +3,22 @@
       "title": "Fund Ukraine's Military, End Wasteful Aid",
       "subtitle": "Exposing Corruption and Bias to Prioritize Military Support and Secure Ukraine's Future.",
       "downloadReport": "Download Report",
+      "aboutUs": {
+        "title": "About Us",
+        "text": "We are a voluntary public organization supporting a free society and fighting against authoritarian regimes. The organization unites people from all over the world who care about what is happening in Ukraine"
+      },
+      "call": {
+        "title": "Call to Congress",
+        "description": "We urge you to support our efforts to redirect U.S. aid to Ukraine, ensuring that it is used effectively to support the Ukrainian military and secure the country's future. Together, we can make a difference.",
+        "link": "Call to Congress",
+        "linkText": "Call to Congress"
+      },
+      "letter": {
+        "title": "Letter to Congress",
+        "description": "We urge you to support our efforts to redirect U.S. aid to Ukraine, ensuring that it is used effectively to support the Ukrainian military and secure the country's future. Together, we can make a difference.",
+        "link": "Letter to Congress",
+        "linkText": "Letter to Congress"
+      },
       "mission": {
         "title": "Mission:",
         "text": "Our mission is to ensure that U.S. aid to Ukraine is used effectively to support its defense capabilities and long-term stability. Current programs are not achieving their goals and may even be counterproductive. We aim to <b>redirect funds from ineffective projects to the Ukrainian military</b>, enhancing its ability to defend the country from aggression."
@@ -32,28 +48,17 @@
         "title": "FAQ",
         "question1": "What are the main concerns raised about US financial aid to Ukraine?",
         "answer1": "The primary concerns revolve around the misuse of funds, particularly humanitarian aid, which has reportedly been embezzled by Ukrainian officials and sold for personal gain. Additionally, there are concerns that US-funded programs meant to promote democracy and combat corruption have proven largely ineffective, with evidence of ongoing corruption, including a booming luxury car market despite the war, inflated military food procurement contracts, and misuse of research funds. It&apos;s also argued that a substantial portion of the funds go to what some perceive as biased propaganda aligned with the US Democratic party, rather than promoting independent media.",
-        "question2": "How is US media support in Ukraine being criticized?",
-        "answer2": "The report argues that a Russian-dominated Ukraine would embolden Russia to expand its influence in the region, potentially leading to further conflicts and damaging US interests in Europe. It also suggests a failure to support Ukraine would give Russia access to NATO-related military technologies and would be interpreted as weakness by adversarial nations, potentially encouraging them to pursue their own territorial ambitions, specifically noting that Russia might turn its attention to helping China take Taiwan.",
+        
         "question3": "What evidence is cited to demonstrate corruption within Ukraine?",
         "answer3": "Several examples are provided, including: large-scale theft of humanitarian aid in the Zaporizhia region, evidenced by missing trucks, containers, and rail cars, a luxury car market that is booming espite the war, an inflated military food procurement scandal where prices were 2-3 times higher than market rates, misuse of funds allocated to Antarctic research, including questionable contracts with shell companies for unnecessary luxuries such as octopus, salmon, wine, and caviar, and the controversial purchase of musical instruments and Lego sets for inadequate bomb shelters.",
-        "question4": "What is the &quot;Gym&quot; concentration camp mentioned in the report?",
-        "answer4": "The &quot;Gym&quot; refers to an unofficial detention facility that allegedly operated in the basement of the central Security Service of Ukraine (SBU) building in Kyiv. This facility is reported to ave held up to 70 people at a time, where detainees were allegedly subjected to illegal detention, blindfolding, limited food and water, and sometimes torture and coercion to confess to crimes. It&apos;s ighlighted that one of the alleged victims of torture in the Gym is a key witness in the case against Oleksandr Dubinsky who accuses members of the Biden family of corruption.",
+        "question4": "What is the \"Gym\" concentration camp mentioned in the report?",
+        "answer4": "The \"Gym\" refers to an unofficial detention facility that allegedly operated in the basement of the central Security Service of Ukraine (SBU) building in Kyiv. This facility is reported to ave held up to 70 people at a time, where detainees were allegedly subjected to illegal detention, blindfolding, limited food and water, and sometimes torture and coercion to confess to crimes. It&apos;s ighlighted that one of the alleged victims of torture in the Gym is a key witness in the case against Oleksandr Dubinsky who accuses members of the Biden family of corruption.",
         "question5": " What human rights abuses are being reported within the Ukrainian military recruitment process?",
         "answer5": "There are reports of illegal detentions, torture, and beatings within the Territorial Centers of Recruitment and Social Support (TCR) during the mobilization of people into the military. In some cases, these abuses have reportedly led to the death of detainees. There are also reports of physical abuse of those who are not yet mobilized.",
         "question6": "What is the main recommendation of the report regarding US aid to Ukraine?",
         "answer6": "The main recommendation is to redirect $482 million from the 2025 USAID budget, as well as other funding aimed at media support, anti-corruption efforts, and democracy initiatives, towards trengthening the Ukrainian military. The reasoning is that corruption and misuse of funds render other forms of aid ineffective and do not contribute to the overall security goals, while supporting Ukraine ilitarily is necessary to deter further Russian  aggression.",
         "question7": " What are the strategic incentives for the USA to support Ukraine according to the report?",
         "answer7": "The report argues that a Russian-dominated Ukraine would embolden Russia to expand its influence in the region, potentially leading to further conflicts and damaging US interests in Europe. It also  suggests a failure to support Ukraine would give Russia access to NATO-related military technologies and would be interpreted as weakness by adversarial nations, potentially encouraging them to pursue their own territorial ambitions, specifically noting that Russia might turn its attention to helping China take Taiwan."
-      },
-      "call": {
-        "title": "Call to Action",
-        "text": "We urge you to support our efforts to redirect U.S. aid to Ukraine, ensuring that it is used effectively to support the Ukrainian military and secure the country's future. Together, we can make a difference.",
-        "link": "Call to Congress"
-      },         
-      "letter": {
-        "title": "Letter to Congress",
-        "text": "We urge you to support our efforts to redirect U.S. aid to Ukraine, ensuring that it is used effectively to support the Ukrainian military and secure the country's future. Together, we can make a difference.",
-        "link": "Letter to Congress"
       }
     }
   }

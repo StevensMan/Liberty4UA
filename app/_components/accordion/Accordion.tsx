@@ -14,7 +14,7 @@ export const Accordion = () => {
           <p>{t('answer1')}</p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border-2 border-gray-600">
+      {/* <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
         <h4 className="collapse-title text-2xl font-bold md:text-4xl">
           {t('question2')}
@@ -22,7 +22,7 @@ export const Accordion = () => {
         <div className="collapse-content text-lg md:text-2xl">
           <p>{t('answer2')}</p>
         </div>
-      </div>
+      </div> */}
       <div className="collapse collapse-arrow border-2 border-gray-600">
         <input type="radio" name="my-accordion-2" />
         <h4 className="collapse-title text-2xl font-bold md:text-4xl">

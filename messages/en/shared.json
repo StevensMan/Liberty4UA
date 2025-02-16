@@ -3,7 +3,8 @@
     "nav": {
         "home": "Home",
         "about": "About",
-        "contact": "Contact"
+        "contact": "Contact",
+        "callToCongress": "Call to Congress"
     }
   },
   "footer": {

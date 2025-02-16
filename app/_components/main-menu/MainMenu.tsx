@@ -37,7 +37,7 @@ export const MainMenu = () => {
           isOpen ? 'flex' : 'hidden'
         )}
       >
-        <li>
+        {/* <li>
           <Link
             className={cn(
               'hover:text-yellow-400',
@@ -48,8 +48,8 @@ export const MainMenu = () => {
           >
             {t('about')}
           </Link>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <Link
             className={cn(
               'hover:text-yellow-400',
@@ -59,6 +59,18 @@ export const MainMenu = () => {
             onClick={handleClose}
           >
             {t('contact')}
+          </Link>
+        </li> */}
+        <li>
+          <Link
+            className={cn(
+              'hover:text-yellow-400',
+              pathname === routes.call && 'text-yellow-400'
+            )}
+            href={routes.call}
+            onClick={handleClose}
+          >
+            {t('callToCongress')}
           </Link>
         </li>
         <li>

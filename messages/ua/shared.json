@@ -3,7 +3,8 @@
       "nav": {
         "home": "Головна",
         "about": "Про нас",
-        "contact": "Контакти"
+        "contact": "Контакти",
+        "callToCongress": "Подзвонити до Конгресу"
       }
     },
     "footer": {
