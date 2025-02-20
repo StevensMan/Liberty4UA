@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline'
 import { routes } from '@/lib/routes'
+import { Link } from '@/lib/i18n/routing'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+
 export default function Home() {
   const t = useTranslations('HomePage')
 
@@ -24,10 +27,30 @@ export default function Home() {
             {t('title')}
           </h1>
           <p className="text-balance text-lg md:text-2xl">{t('subtitle')}</p>
-          <button className="btn self-start bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl">
+          <div className="card-actions justify-start">
+          <Link
+            role="button"
+            target="_blank"
+            href={routes.call}
+            className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
+          >
+            {t('call.linkText')}
+            <KeyboardArrowRightIcon />
+          </Link>
+          <Link
+            role="button"
+            target="_blank"
+            href={'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'}
+            className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
+          >
+            {t('letter.linkText')}
+            <KeyboardArrowRightIcon />
+          </Link>
+        </div>
+          {/* <button className="btn self-start bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl">
             <DownloadForOfflineIcon />
             {t('downloadReport')}
-          </button>
+          </button> */}
         </Container>
       </Section>
       <Section>
@@ -42,7 +65,7 @@ export default function Home() {
           </p>
         </Container>
       </Section>
-      <Section>
+      {/* <Section>
         <Container className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <CardAction
             title={t('call.title')}
@@ -59,7 +82,7 @@ export default function Home() {
             linkText={t('letter.link')}
           />
         </Container>
-      </Section>
+      </Section> */}
       <Section>
         <Container className="flex flex-col items-center justify-center gap-6">
           <h2 className="text-center text-4xl font-bold md:text-6xl">
