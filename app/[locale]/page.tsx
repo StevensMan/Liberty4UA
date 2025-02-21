@@ -1,7 +1,6 @@
 import { Accordion, Container, Section, CardAction } from '@/app/_components'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline'
 import { routes } from '@/lib/routes'
 import { Link } from '@/lib/i18n/routing'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'

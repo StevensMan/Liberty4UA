@@ -11,9 +11,21 @@ const nextConfig: NextConfig = {
 
   images: {
     remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'bioguide.congress.gov'
+        },
+        {
+          protocol: 'http',
+          hostname: 'bioguide.congress.gov'
+        },
       {
         protocol: 'https',
         hostname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.whitehouse.gov'
       }
     ],
     formats: ['image/avif', 'image/webp']
