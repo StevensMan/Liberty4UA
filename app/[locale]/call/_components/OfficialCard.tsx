@@ -61,13 +61,14 @@ export const OfficialCard = ({ official }: { official: Official }) => {
         {official.urls && official.urls.length > 0 && (
           <div className="mb-2">
             <h4 className="font-medium text-gray-700">Websites:</h4>
+
             {official.urls.map((url) => (
               <Link
                 key={url}
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link"
+                className="link block"
               >
                 {url}
               </Link>

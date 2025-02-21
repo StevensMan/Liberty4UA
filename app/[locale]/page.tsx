@@ -1,4 +1,4 @@
-import { Accordion, Container, Section, CardAction } from '@/app/_components'
+import { Accordion, Container, Section } from '@/app/_components'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { routes } from '@/lib/routes'
@@ -27,25 +27,27 @@ export default function Home() {
           </h1>
           <p className="text-balance text-lg md:text-2xl">{t('subtitle')}</p>
           <div className="card-actions justify-start">
-          <Link
-            role="button"
-            target="_blank"
-            href={routes.call}
-            className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
-          >
-            {t('call.linkText')}
-            <KeyboardArrowRightIcon />
-          </Link>
-          <Link
-            role="button"
-            target="_blank"
-            href={'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'}
-            className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
-          >
-            {t('letter.linkText')}
-            <KeyboardArrowRightIcon />
-          </Link>
-        </div>
+            <Link
+              role="button"
+              target="_blank"
+              href={routes.call}
+              className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
+            >
+              {t('call.linkText')}
+              <KeyboardArrowRightIcon />
+            </Link>
+            <Link
+              role="button"
+              target="_blank"
+              href={
+                'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'
+              }
+              className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
+            >
+              {t('letter.linkText')}
+              <KeyboardArrowRightIcon />
+            </Link>
+          </div>
           {/* <button className="btn self-start bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl">
             <DownloadForOfflineIcon />
             {t('downloadReport')}
