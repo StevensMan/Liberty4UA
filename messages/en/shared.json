@@ -4,7 +4,8 @@
         "home": "Home",
         "about": "About",
         "contact": "Contact",
-        "callToCongress": "Call to Congress"
+        "call": "Call to Congress",
+        "letter": "Letter to Congress"
     }
   },
   "footer": {

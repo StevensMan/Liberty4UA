@@ -70,7 +70,20 @@ export const MainMenu = () => {
             href={routes.call}
             onClick={handleClose}
           >
-            {t('callToCongress')}
+            {t('call')}
+          </Link>
+        </li>
+        <li>
+          <Link
+            // className={cn(
+            //   'hover:text-yellow-400',
+            //   pathname === routes.call && 'text-yellow-400'
+            // )}
+            href="https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid"
+            target="_blank"
+            onClick={handleClose}
+          >
+            {t('letter')}
           </Link>
         </li>
         <li>
