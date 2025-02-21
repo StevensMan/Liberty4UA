@@ -15,7 +15,7 @@ function getSocialMediaUrl(channel: { type: string; id: string }) {
 
 export const OfficialCard = ({ official }: { official: Official }) => {
   return (
-    <div className="flex gap-6 rounded-lg bg-white p-6 shadow-md">
+    <div className="flex flex-col gap-6 rounded-lg bg-white p-6 shadow-md md:flex-row">
       {official.photoUrl && (
         <Image
           src={official.photoUrl}
