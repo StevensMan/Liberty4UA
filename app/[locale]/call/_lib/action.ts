@@ -10,6 +10,7 @@ import type {
 import { addressSchema } from './schema'
 
 const API_URL = 'https://civicinfo.googleapis.com/civicinfo/v2/representatives'
+const GOOGLE_CIVIC_API_KEY = 'AIzaSyC3O7w9Scz5qBl618laDhx3lPmkuclTNok'
 
 export async function getCivicInfo(
   prevState: { error?: string; data?: { officials: Official[] } } | null,
@@ -37,7 +38,7 @@ export async function getCivicInfo(
     // Build query
     const { address, city, zip } = parsed.data
     const queryParams = new URLSearchParams({
-      key: process.env.GOOGLE_CIVIC_API_KEY || '',
+      key: GOOGLE_CIVIC_API_KEY,
       address: `${address}, ${city}, ${zip}`,
       roles: 'legislatorLowerBody',
       levels: 'country'
