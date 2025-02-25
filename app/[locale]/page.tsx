@@ -1,16 +1,16 @@
-import { Accordion, Container, Section } from '@/app/_components'
+import { Accordion, Container, Section, LinkAsButton, Text } from '@/app/_components'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { routes } from '@/lib/routes'
-import { Link } from '@/lib/i18n/routing'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline'
 
 export default function Home() {
   const t = useTranslations('HomePage')
 
   return (
     <main className="w-full">
-      <Section className="relative mt-[-100px] h-screen text-white">
+      <Section id="hero" className="relative mt-[-100px] h-screen text-white">
         <Image
           src="/hero-bkg.jpg"
           alt="Background"
@@ -22,173 +22,149 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[#004080]/50" />
         <Container className="relative z-10 flex h-full flex-col justify-center gap-8">
-          <h1 className="text-balance text-4xl font-bold md:text-8xl">
-            {t('title')}
-          </h1>
-          <p className="text-balance text-lg md:text-2xl">{t('subtitle')}</p>
+          <Text variant="h1" size="lg">{t('title')}</Text>
+          <Text variant="p" size="lg" className="text-balance">{t('subtitle')}</Text>
+          
           <div className="card-actions justify-start">
-            <Link
-              role="button"
-              target="_blank"
-              href={routes.call}
-              className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
-            >
+            <LinkAsButton href={routes.call}>
               {t('call.linkText')}
               <KeyboardArrowRightIcon />
-            </Link>
-            <Link
-              role="button"
+            </LinkAsButton>
+            <LinkAsButton
               target="_blank"
-              href={
-                'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'
-              }
-              className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
+              href={'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'}
             >
               {t('letter.linkText')}
               <KeyboardArrowRightIcon />
-            </Link>
+            </LinkAsButton>
           </div>
-          {/* <button className="btn self-start bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl">
-            <DownloadForOfflineIcon />
-            {t('downloadReport')}
-          </button> */}
+          
+          <div className="flex flex-col items-start gap-4">
+            <Text variant="p" size="lg" bold>Learn more</Text>
+            <a
+              href="/2025.01.15_ReportForCongressmen.pdf"
+              target="_blank"
+              className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
+            >
+              <DownloadForOfflineIcon />
+              <div className="flex flex-row items-baseline gap-2">
+                {t('downloadReport')}
+                <span className="text-sm">1.1 MB</span>
+              </div>
+            </a>
+          </div>
         </Container>
       </Section>
-      <Section>
-        <Container className="flex flex-col items-center justify-center gap-6 pt-16">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">
-            {t('aboutUs.title')}
-          </h2>
-          <p className="text-lg md:text-2xl">
+      
+      <Section id="about-us">
+        <Container className="flex flex-col gap-6 pt-16">
+          <Text variant="h2" size="lg">{t('aboutUs.title')}</Text>
+          <Text variant="p" size="lg">
             {t.rich('aboutUs.text', {
               b: (chunks) => <span className="font-bold">{chunks}</span>
             })}
-          </p>
+          </Text>
         </Container>
       </Section>
-      {/* <Section>
-        <Container className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <CardAction
-            title={t('call.title')}
-            description={t('call.description')}
-            link={routes.call}
-            linkText={t('call.link')}
-          />
-          <CardAction
-            title={t('letter.title')}
-            description={t('letter.description')}
-            link={
-              'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid'
-            }
-            linkText={t('letter.link')}
-          />
-        </Container>
-      </Section> */}
-      <Section>
-        <Container className="flex flex-col items-center justify-center gap-6">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">
-            {t('mission.title')}
-          </h2>
-          <p className="text-lg md:text-2xl">
+      
+      <Section id="mission">
+        <Container className="flex flex-col gap-6">
+          <Text variant="h2" size="lg">{t('mission.title')}</Text>
+          <Text variant="p" size="lg">
             {t.rich('mission.text', {
               b: (chunks) => <span className="font-bold">{chunks}</span>
             })}
-          </p>
+          </Text>
         </Container>
       </Section>
-      <Section>
-        <Container className="flex flex-col items-center justify-center gap-6">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">
-            {t('goals.title')}
-          </h2>
-          <ul className="list-inside list-disc text-lg md:text-2xl">
-            <li>
+      
+      <Section id="goals">
+        <Container className="flex flex-col gap-6">
+          <Text variant="h2" size="lg">{t('goals.title')}</Text>
+          <ul className="text-lg md:text-2xl">
+            <Text variant="list-item" size="lg">
               {t.rich('goals.point1', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('goals.point2', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('goals.point3', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('goals.point4', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('goals.point5', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
+            </Text>
           </ul>
         </Container>
       </Section>
-      <Section>
-        <Container className="flex flex-col items-center justify-center gap-8">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">
-            {t('issues.title')}
-          </h2>
-          <ul className="list-inside list-disc text-lg md:text-2xl">
-            <li>
+      
+      <Section id="issues">
+        <Container className="flex flex-col gap-8">
+          <Text variant="h2" size="lg">{t('issues.title')}</Text>
+          <ul>
+            <Text variant="list-item" size="lg">
               {t.rich('issues.point1', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('issues.point2', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('issues.point3', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('issues.point4', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
+            </Text>
           </ul>
         </Container>
       </Section>
 
-      <Section>
-        <Container className="flex flex-col items-center justify-center gap-8">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">
-            {t('why.title')}
-          </h2>
-          <ul className="list-inside list-disc text-lg md:text-2xl">
-            <li>
+      <Section id="why">
+        <Container className="flex flex-col gap-8">
+          <Text variant="h2" size="lg">{t('why.title')}</Text>
+          <ul>
+            <Text variant="list-item" size="lg">
               {t.rich('why.point1', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('why.point2', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
-            <li>
+            </Text>
+            <Text variant="list-item" size="lg">
               {t.rich('why.point3', {
                 b: (chunks) => <span className="font-bold">{chunks}</span>
               })}
-            </li>
+            </Text>
           </ul>
         </Container>
       </Section>
-      <Section>
-        <Container className="flex flex-col items-center justify-center gap-8 pb-16">
-          <h2 className="text-center text-4xl font-bold md:text-6xl">
-            {t('faq.title')}
-          </h2>
+      
+      <Section id="faq">
+        <Container className="flex flex-col gap-8 pb-16">
+          <Text variant="h2" size="lg">{t('faq.title')}</Text>
           <Accordion />
         </Container>
       </Section>

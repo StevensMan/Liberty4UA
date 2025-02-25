@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#000000',
+  // themeColor: '#000000',
   width: 'device-width',
   initialScale: 1
 }
@@ -27,11 +27,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Fund Ukraine's Military, End Wasteful Aid",
   description: "Fund Ukraine's Military, End Wasteful Aid",
-  metadataBase: new URL('http://libertyforukraine.org/'),
+  metadataBase: new URL('http://liberty4ua.org/'),
   openGraph: {
     title: "Fund Ukraine's Military, End Wasteful Aid",
     description: "Fund Ukraine's Military, End Wasteful Aid",
-    url: 'http://libertyforukraine.org/',
+    url: 'http://liberty4ua.org/',
     siteName: "Fund Ukraine's Military, End Wasteful Aid",
     locale: 'en_US',
     type: 'website'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Fund Ukraine's Military, End Wasteful Aid",
     description: "Fund Ukraine's Military, End Wasteful Aid",
-    creator: '@LibertyForUkraine'
+    creator: '@Liberty4Ua'
   },
   icons: {
     icon: [

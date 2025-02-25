@@ -1,94 +1,37 @@
 'use client'
 
-import { useActionState } from 'react'
-import Form from 'next/form'
-import { Official } from './_lib/types'
-import { getCivicInfo } from './_lib/action'
-import { SubmitButton, OfficialCard } from './_components'
-import { Section, Container } from '@/app/_components'
+import { Form } from './_components'
+import { Section, Container, Text } from '@/app/_components'
 
 export default function CallPage() {
-  const [state, formAction] = useActionState(getCivicInfo, null)
-
   return (
-    <Section>
-      <Container className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-center text-4xl font-bold">
-          Please enter your address in the form below to find your
-          Representatives
-        </h1>
-        <p className="text-center text-lg">
-          A Call is allways better, however you can also{' '}
-          <a
-            className="text-blue-500"
-            href="https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid"
-          >
-            Write
-          </a>{' '}
-          to your Representative and Senators.
-        </p>
-        <Form
-          action={formAction}
-          className="grid max-w-2xl grid-cols-1 items-end gap-4 md:grid-cols-2"
+    <>
+    <Section id="form">
+      <Container className="flex flex-col items-center justify-center gap-4 pt-16">
+      <Text variant="h2" size="lg" className="text-center">
+        Please enter your address in the form below to find your
+        Representatives
+      </Text>
+      <Text variant="p" size="lg" className="text-center">
+        A Call is allways better, however you can also{' '}
+        <a
+          className="text-blue-500"
+          href="https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid"
         >
-          <div className="w-full">
-            <label htmlFor="address" className="block">
-              Street Address:
-            </label>
-            <input
-              type="text"
-              placeholder="Address"
-              className="input w-full"
-              id="address"
-              name="address"
-              style={{ color: 'white' }}
-            />
-          </div>
-          <div className="w-full">
-            <label htmlFor="city" className="block">
-              City:
-            </label>
-            <input
-              id="city"
-              name="city"
-              type="text"
-              placeholder="City"
-              className="input w-full text-white"
-              style={{ color: 'white' }}
-            />
-          </div>
-          <div className="w-full">
-            <label htmlFor="zip" className="block">
-              ZIP Code:
-            </label>
-            <input
-              id="zip"
-              name="zip"
-              type="text"
-              placeholder="ZIP Code"
-              className="input w-full text-white"
-              style={{ color: 'white' }}
-            />
-          </div>
-
-          <SubmitButton />
-        </Form>
-
-        {state?.error && <div className="mt-4 text-red-500">{state.error}</div>}
-        {state?.data?.officials && (
-          <div className="mt-8 space-y-6">
-            <h2 className="mb-4 text-2xl font-bold">Found Officials</h2>
-            {state.data.officials.map((official: Official) => (
-              <OfficialCard key={official.uniqueId} official={official} />
-            ))}
-          </div>
-        )}
+          Write
+        </a>{' '}
+        to your Representative and Senators.
+      </Text>
+        <Form />
       </Container>
-      <Container className="mt-8 space-y-4">
-        <h2 className="text-2xl font-bold">
+      </ Section>
+
+      <Section id="sample-text">
+        <Container className="flex flex-col gap-4 mt-8 pb-16">
+        <Text variant="h2" size="md" className="text-balance">
           Sample text for calling your Representative and Senators
-        </h2>
-        <p className="text-lg">
+        </Text>
+        <Text variant="p" size="md">
           &quot;I am calling to draw your attention to critical concerns about
           the effectiveness of U.S. assistance to Ukraine and to urge a
           reassessment of how funds are allocated to better support
@@ -125,8 +68,9 @@ export default function CallPage() {
           used effectively. Thank you for your time and dedication to this
           important issue. I would be glad to have the opportunity to discuss
           this issue in more detail and provide additional information.&quot;
-        </p>
+        </Text>
       </Container>
-    </Section>
+      </Section>
+    </>
   )
 }

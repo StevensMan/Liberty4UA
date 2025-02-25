@@ -8,12 +8,12 @@
   --max-width: 80.25rem; /* 1284px / 16px = 80.25rem */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 @media (width <= 1024px) {
   .text-5xl.font-bold {
@@ -22,7 +22,7 @@
 }
 
 body {
-  color: var(--background);
-  background: var(--foreground);
+  color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
