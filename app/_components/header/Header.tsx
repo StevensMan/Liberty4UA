@@ -32,9 +32,9 @@ export const Header = () => {
       )}
       <Container className="relative flex h-full items-center justify-between">
         <Link href={routes.home}>
-          <p className="text-2xl font-bold text-white">
+          <span className="text-2xl font-bold text-white">
             Liberty4<span className="text-yellow-400">UA</span>
-          </p>
+          </span>
         </Link>
         <MainMenu />
       </Container>

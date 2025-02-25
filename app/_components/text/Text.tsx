@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-type TextVariant = 'h1' | 'h2' | 'h3' | 'p' | 'list-item'
+type TextVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'list-item'
 type TextSize = 'sm' | 'md' | 'lg'
 
 interface TextProps {
@@ -20,29 +20,34 @@ export const Text = ({
 }: TextProps) => {
   const sizeClasses = {
     h1: {
-      sm: 'text-3xl md:text-6xl',
-      md: 'text-4xl md:text-7xl',
-      lg: 'text-4xl md:text-8xl'
+      sm: 'text-2xl md:text-5xl',
+      md: 'text-3xl md:text-6xl',
+      lg: 'text-3xl md:text-7xl'
     },
     h2: {
-      sm: 'text-2xl md:text-4xl',
-      md: 'text-3xl md:text-5xl',
-      lg: 'text-4xl md:text-6xl'
-    },
-    h3: {
       sm: 'text-xl md:text-3xl',
       md: 'text-2xl md:text-4xl',
       lg: 'text-3xl md:text-5xl'
     },
+    h3: {
+      sm: 'text-lg md:text-2xl',
+      md: 'text-xl md:text-3xl',
+      lg: 'text-2xl md:text-4xl'
+    },
+    h4: {
+      sm: 'text-base md:text-xl',
+      md: 'text-lg md:text-2xl',
+      lg: 'text-xl md:text-3xl'
+    },
     p: {
-      sm: 'text-base md:text-lg',
-      md: 'text-lg md:text-xl',
-      lg: 'text-lg md:text-2xl'
+      sm: 'text-sm md:text-base',
+      md: 'text-base md:text-lg',
+      lg: 'text-lg md:text-xl'
     },
     'list-item': {
-      sm: 'text-base md:text-lg',
-      md: 'text-lg md:text-xl',
-      lg: 'text-lg md:text-2xl'
+      sm: 'text-sm md:text-base',
+      md: 'text-base md:text-lg',
+      lg: 'text-lg md:text-xl'
     }
   }
 
@@ -61,6 +66,8 @@ export const Text = ({
       return <h2 className={combinedClasses}>{children}</h2>
     case 'h3':
       return <h3 className={combinedClasses}>{children}</h3>
+    case 'h4':
+      return <h4 className={combinedClasses}>{children}</h4>
     case 'p':
       return <p className={combinedClasses}>{children}</p>
     case 'list-item':

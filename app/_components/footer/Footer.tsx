@@ -1,4 +1,4 @@
-import { Container, Section } from '@/app/_components'
+import { Container, Section, Text } from '@/app/_components'
 import { Link } from '@/lib/i18n/routing'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import TelegramIcon from '@mui/icons-material/Telegram'
@@ -13,11 +13,11 @@ export const Footer = () => {
     <footer className="mt-auto flex min-h-[100px] w-full bg-[#004080] font-bold text-white md:items-center">
       <Section>
         <Container className="flex flex-col gap-6 md:flex-row md:justify-between">
-          <p className="text-2xl font-bold">
+          <span className="text-2xl font-bold">
             Liberty4<span className="text-yellow-400">UA</span>
-          </p>
+          </span>
           <div className="flex flex-col gap-4">
-            <h4 className="text-xl font-bold">{t('titles.contact')}</h4>
+            <Text variant="h4" size="lg">{t('titles.contact')}</Text>
             <Link
               className="flex items-center gap-2 text-sm md:text-base"
               href="mailto:contact@liberty4ua.org"
@@ -27,7 +27,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="text-xl font-bold">{t('titles.partners')}</h4>
+            <Text variant="h4" size="lg">{t('titles.partners')}</Text>
             <Link
               className="flex items-center gap-2 text-sm md:text-base"
               href="https://protectukrainenow.org"

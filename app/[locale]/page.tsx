@@ -40,9 +40,9 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col items-start gap-4">
-            <Text variant="p" size="lg" bold>Learn more</Text>
+            <Text variant="p" size="lg" bold>{t('learnMore')}</Text>
             <a
-              href="/2025.01.15_ReportForCongressmen.pdf"
+              href="/2025.02.24_ReportForCongressmen.pdf"
               target="_blank"
               className="btn bg-yellow-400 text-lg text-black hover:bg-yellow-100 md:text-2xl"
             >

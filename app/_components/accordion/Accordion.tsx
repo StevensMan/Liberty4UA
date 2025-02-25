@@ -1,73 +1,36 @@
 import { useTranslations } from 'next-intl'
+import { Text } from '@/app/_components'
 
 export const Accordion = () => {
   const t = useTranslations('HomePage.faq')
+  
+  // Create an array of question numbers
+  const questionCount = 6
+  const questions = Array.from({ length: questionCount }, (_, i) => i + 1)
 
   return (
     <>
-      <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" defaultChecked />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question1')}
-        </h4>
-        <div className="collapse-content text-lg md:text-2xl">
-          <p>{t('answer1')}</p>
+      {questions.map((num) => (
+        <div key={num} className="collapse collapse-arrow border-2 border-gray-600">
+          <input 
+            type="radio" 
+            name="my-accordion-2" 
+            defaultChecked={num === 1} 
+          />
+          <Text 
+            variant="h3" 
+            size="lg" 
+            className="collapse-title font-bold"
+          >
+            {t(`question${num}`)}
+          </Text>
+          <div className="collapse-content">
+            <Text variant="p" size="lg">
+              {t(`answer${num}`)}
+            </Text>
+          </div>
         </div>
-      </div>
-      {/* <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question2')}
-        </h4>
-        <div className="collapse-content text-lg md:text-2xl">
-          <p>{t('answer2')}</p>
-        </div>
-      </div> */}
-      <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question3')}
-        </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
-          <p>{t('answer3')}</p>
-        </div>
-      </div>
-      <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question4')}
-        </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
-          <p>{t('answer4')}</p>
-        </div>
-      </div>
-      <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question5')}
-        </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
-          <p>{t('answer5')}</p>
-        </div>
-      </div>
-      <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question6')}
-        </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
-          <p>{t('answer6')}</p>
-        </div>
-      </div>
-      <div className="collapse collapse-arrow border-2 border-gray-600">
-        <input type="radio" name="my-accordion-2" />
-        <h4 className="collapse-title text-2xl font-bold md:text-4xl">
-          {t('question7')}
-        </h4>
-        <div className="xs:text-lg collapse-content text-base md:text-2xl">
-          <p>{t('answer7')}</p>
-        </div>
-      </div>
+      ))}
     </>
   )
 }
