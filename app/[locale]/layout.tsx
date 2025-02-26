@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header, Footer } from '@/app/_components'
 import { routing } from '@/lib/i18n/routing'
@@ -8,39 +7,38 @@ import { getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { Locale } from '@/lib/i18n/types'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-})
-
 export const viewport: Viewport = {
-  // themeColor: '#000000',
+  themeColor: '#0057b7',
   width: 'device-width',
   initialScale: 1
 }
 
 export const metadata: Metadata = {
-  title: "Fund Ukraine's Military, End Wasteful Aid",
-  description: "Fund Ukraine's Military, End Wasteful Aid",
+  title: "Fund Ukraine's Military, End Wasteful Aid | Liberty4UA",
+  description: "Liberty4UA advocates for direct military funding to Ukraine while eliminating wasteful aid. Join our mission to support Ukraine's fight for freedom efficiently.",
   metadataBase: new URL('http://liberty4ua.org/'),
   openGraph: {
-    title: "Fund Ukraine's Military, End Wasteful Aid",
-    description: "Fund Ukraine's Military, End Wasteful Aid",
+    title: "Fund Ukraine's Military, End Wasteful Aid | Liberty4UA",
+    description: "Liberty4UA advocates for direct military funding to Ukraine while eliminating wasteful aid. Join our mission to support Ukraine's fight for freedom efficiently.",
     url: 'http://liberty4ua.org/',
-    siteName: "Fund Ukraine's Military, End Wasteful Aid",
+    siteName: "Liberty4UA",
     locale: 'en_US',
-    type: 'website'
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Liberty4UA - Fund Ukraine's Military, End Wasteful Aid"
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Fund Ukraine's Military, End Wasteful Aid",
-    description: "Fund Ukraine's Military, End Wasteful Aid",
-    creator: '@Liberty4Ua'
+    title: "Fund Ukraine's Military, End Wasteful Aid | Liberty4UA",
+    description: "Liberty4UA advocates for direct military funding to Ukraine while eliminating wasteful aid. Join our mission to support Ukraine's fight for freedom efficiently.",
+    creator: '@Liberty4Ua',
+    images: ['/og-image.jpg']
   },
   icons: {
     icon: [
@@ -69,14 +67,18 @@ export default async function RootLayout(props: {
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth" data-theme="liberty4ua">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col items-center antialiased`}
+        className={'flex min-h-screen flex-col items-center bg-gray-50 antialiased'}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {props.children}
-          <Footer />
+          <div className="flex w-full flex-col items-center">
+            <Header />
+            <main className="flex w-full flex-1 flex-col items-center">
+              {props.children}
+            </main>
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

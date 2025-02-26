@@ -11,7 +11,10 @@
   "footer": {
     "titles": {
       "contact": "Contact",
-      "partners": "Partners"
+      "partners": "Partners",
+      "quickLinks": "Quick Links",
+      "description": "Liberty4UA advocates for direct military funding to Ukraine while eliminating wasteful aid. Join our mission to support Ukraine's fight for freedom efficiently.",
+      "copyright": "All rights reserved."
     }
   }
 }

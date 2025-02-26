@@ -3,93 +3,98 @@
 import { Link, usePathname } from '@/lib/i18n/routing'
 import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
-import { useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
 import { useTranslations } from 'next-intl'
 import { LanguageSwitcher } from '@/app/_components/language-switcher/LanguageSwitcher'
 
-export const MainMenu = () => {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
+type MainMenuProps = {
+  orientation?: 'horizontal' | 'vertical'
+  onItemClick?: () => void
+}
 
+export const MainMenu = ({ orientation = 'horizontal', onItemClick }: MainMenuProps) => {
+  const pathname = usePathname()
   const t = useTranslations('header.nav')
 
-  const handleClose = () => {
-    setIsOpen(false)
+  const handleItemClick = () => {
+    if (onItemClick) {
+      onItemClick()
+    }
   }
 
+  const menuItems = [
+    { name: t('home'), href: routes.home },
+    { name: t('about'), href: routes.about },
+    { name: t('call'), href: routes.call },
+    { 
+      name: t('letter'), 
+      href: 'https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid',
+      external: true 
+    },
+    { name: t('contact'), href: routes.contact }
+  ]
+
   return (
-    <>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center text-white md:hidden"
-      >
-        {isOpen ? (
-          <CloseIcon fontSize="large" />
-        ) : (
-          <MenuIcon fontSize="large" />
-        )}
-      </button>
-      <ul
-        className={cn(
-          'absolute left-0 top-0 mt-[100px] flex w-full flex-col items-center justify-center gap-8 bg-white p-6 md:relative md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:bg-transparent md:p-0 md:text-white',
-          isOpen ? 'flex' : 'hidden'
-        )}
-      >
-        {/* <li>
-          <Link
-            className={cn(
-              'hover:text-yellow-400',
-              pathname === routes.about && 'text-yellow-400'
+    <nav className={cn(
+      'flex items-center gap-1',
+      orientation === 'vertical' && 'flex-col items-start gap-4'
+    )}>
+      <ul className={cn(
+        'flex items-center gap-1',
+        orientation === 'vertical' && 'flex-col items-start gap-4 w-full'
+      )}>
+        {menuItems.map((item) => (
+          <li key={item.name} className={orientation === 'vertical' ? 'w-full' : ''}>
+            {item.external ? (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleItemClick}
+                className={cn(
+                  'relative block px-3 py-2 text-sm font-medium transition-colors',
+                  orientation === 'vertical' 
+                    ? 'w-full rounded px-4 py-3 text-white hover:bg-white/10' 
+                    : 'text-white/90 hover:text-white',
+                  !orientation && 'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all hover:after:w-full'
+                )}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                href={item.href}
+                onClick={handleItemClick}
+                className={cn(
+                  'relative block px-3 py-2 text-sm font-medium transition-colors',
+                  orientation === 'vertical' 
+                    ? 'w-full rounded px-4 py-3 text-white hover:bg-white/10' 
+                    : 'text-white/90 hover:text-white',
+                  pathname === item.href && (
+                    orientation === 'vertical' 
+                      ? 'bg-white/10 font-bold text-secondary' 
+                      : 'text-secondary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-secondary'
+                  ),
+                  pathname !== item.href && !orientation && 'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all hover:after:w-full'
+                )}
+              >
+                {item.name}
+              </Link>
             )}
-            href={routes.about}
-            onClick={handleClose}
-          >
-            {t('about')}
-          </Link>
-        </li> */}
-        {/* <li>
-          <Link
-            className={cn(
-              'hover:text-yellow-400',
-              pathname === routes.contact && 'text-yellow-400'
-            )}
-            href={routes.contact}
-            onClick={handleClose}
-          >
-            {t('contact')}
-          </Link>
-        </li> */}
-        <li>
-          <Link
-            className={cn(
-              'hover:text-yellow-400',
-              pathname === routes.call && 'text-yellow-400'
-            )}
-            href={routes.call}
-            onClick={handleClose}
-          >
-            {t('call')}
-          </Link>
-        </li>
-        <li>
-          <Link
-            // className={cn(
-            //   'hover:text-yellow-400',
-            //   pathname === routes.call && 'text-yellow-400'
-            // )}
-            href="https://actionnetwork.org/letters/fund-ukraines-military-end-wasteful-aid"
-            target="_blank"
-            onClick={handleClose}
-          >
-            {t('letter')}
-          </Link>
-        </li>
-        <li>
-          <LanguageSwitcher />
-        </li>
+          </li>
+        ))}
       </ul>
-    </>
+      
+      {orientation !== 'vertical' && (
+        <div className="ml-2 border-l border-white/20 pl-2">
+          <LanguageSwitcher />
+        </div>
+      )}
+      
+      {orientation === 'vertical' && (
+        <div className="mt-4 w-full border-t border-white/20 pt-4">
+          <LanguageSwitcher />
+        </div>
+      )}
+    </nav>
   )
 }
