@@ -1,14 +1,27 @@
 {
   "name": "Liberty For Ukraine",
-  "short_name": "Liberty For Ukraine",
+  "short_name": "Liberty4UA",
+  "description": "Supporting Ukraine's fight for freedom through effective advocacy and targeted assistance",
   "icons": [
     {
       "src": "/favicon.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0057b7",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["politics", "advocacy", "nonprofit"],
+  "scope": "/"
 }
