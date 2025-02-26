@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image1.jpg',
         width: 1200,
         height: 630,
         alt: "Liberty4UA - Fund Ukraine's Military, End Wasteful Aid"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Fund Ukraine's Military, End Wasteful Aid | Liberty4UA",
     description: "Liberty4UA advocates for direct military funding to Ukraine while eliminating wasteful aid. Join our mission to support Ukraine's fight for freedom efficiently.",
     creator: '@Liberty4Ua',
-    images: ['/og-image.jpg']
+    images: ['/og-image1.jpg']
   },
   icons: {
     icon: [
